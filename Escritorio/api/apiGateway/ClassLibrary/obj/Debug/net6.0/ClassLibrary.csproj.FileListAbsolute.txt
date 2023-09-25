@@ -1,0 +1,12 @@
+E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\api\apiGateway\ClassLibrary\bin\Debug\net6.0\ClassLibrary.deps.json
+E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\api\apiGateway\ClassLibrary\bin\Debug\net6.0\ClassLibrary.dll
+E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\api\apiGateway\ClassLibrary\bin\Debug\net6.0\ClassLibrary.pdb
+E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\api\apiGateway\ClassLibrary\obj\Debug\net6.0\ClassLibrary.GeneratedMSBuildEditorConfig.editorconfig
+E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\api\apiGateway\ClassLibrary\obj\Debug\net6.0\ClassLibrary.AssemblyInfoInputs.cache
+E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\api\apiGateway\ClassLibrary\obj\Debug\net6.0\ClassLibrary.AssemblyInfo.cs
+E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\api\apiGateway\ClassLibrary\obj\Debug\net6.0\ClassLibrary.csproj.CoreCompileInputs.cache
+E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\api\apiGateway\ClassLibrary\obj\Debug\net6.0\ClassLibrary.dll
+E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\api\apiGateway\ClassLibrary\obj\Debug\net6.0\refint\ClassLibrary.dll
+E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\api\apiGateway\ClassLibrary\obj\Debug\net6.0\ClassLibrary.pdb
+E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\api\apiGateway\ClassLibrary\obj\Debug\net6.0\ref\ClassLibrary.dll
+E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\api\apiGateway\ClassLibrary\obj\Debug\net6.0\ClassLibrary.csproj.AssemblyReference.cache

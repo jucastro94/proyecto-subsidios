@@ -1,0 +1,11 @@
+E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\front\bibliotecaClases\bin\Debug\net6.0\bibliotecaClases.deps.json
+E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\front\bibliotecaClases\bin\Debug\net6.0\bibliotecaClases.dll
+E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\front\bibliotecaClases\bin\Debug\net6.0\bibliotecaClases.pdb
+E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\front\bibliotecaClases\obj\Debug\net6.0\bibliotecaClases.GeneratedMSBuildEditorConfig.editorconfig
+E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\front\bibliotecaClases\obj\Debug\net6.0\bibliotecaClases.AssemblyInfoInputs.cache
+E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\front\bibliotecaClases\obj\Debug\net6.0\bibliotecaClases.AssemblyInfo.cs
+E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\front\bibliotecaClases\obj\Debug\net6.0\bibliotecaClases.csproj.CoreCompileInputs.cache
+E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\front\bibliotecaClases\obj\Debug\net6.0\bibliotecaClases.dll
+E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\front\bibliotecaClases\obj\Debug\net6.0\refint\bibliotecaClases.dll
+E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\front\bibliotecaClases\obj\Debug\net6.0\bibliotecaClases.pdb
+E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\front\bibliotecaClases\obj\Debug\net6.0\ref\bibliotecaClases.dll
