@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\api",
+    "\\api\\apiGateway",
+    "\\api\\apiGateway\\apiGateway",
+    "\\api\\apiGateway\\apiGateway\\Controllers",
+    "\\api\\apiGateway\\apiGateway\\services",
+    "\\api\\apiGateway\\ClassLibrary"
+  ],
+  "SelectedNode": "\\api\\apiGateway\\apiGateway\\services\\RabbitMqPublisher.cs",
+  "PreviewInSolutionExplorer": false
+}
