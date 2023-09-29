@@ -1,0 +1,206 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="03cd7f36-4b9b-48c2-9358-ac037c459a25" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Linkedin DW</ID>
+  <Name>Linkedin DW</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="098bc3da-a5dc-4736-800f-961802835059">
+      <ID>DIM COMMENTS</ID>
+      <Name>DIM COMMENTS</Name>
+      <DimensionID>DIM COMMENTS</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="d07348aa-d97a-4ddf-9e64-61a436b1dfcd">
+          <AttributeID>COMMENT ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="f0f8e60d-fa2e-47ae-8ebd-a6a86300f851">
+      <ID>DIM REACTIONS</ID>
+      <Name>DIM REACTIONS</Name>
+      <DimensionID>DIM REACTIONS</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="5c9ceefa-48eb-4b12-aa35-20a6d36975df">
+          <AttributeID>REACTION ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="136b1a34-b544-45f4-9ff5-7bd9e3b55a7a">
+      <ID>DIM LIKES</ID>
+      <Name>DIM LIKES</Name>
+      <DimensionID>DIM LIKES</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9e3ea58a-a798-4925-8a3a-e77828e14d3a">
+          <AttributeID>LIKE ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="b48b71c6-382d-49dd-b1fe-2782f4cbecf7">
+      <ID>DIM SHARES</ID>
+      <Name>DIM SHARES</Name>
+      <DimensionID>DIM SHARES</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="efd7c18c-521c-4c85-b351-af43fb61f0c2">
+          <AttributeID>SHARE ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="7d3a0db5-6af8-4fec-97f8-6b0993256f06">
+      <ID>FACT SOCIAL ACTIVITY</ID>
+      <Name>FACT SOCIAL ACTIVITY</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="17e46b26-c9ce-4cc9-8f4f-b5c793f812b0">
+          <ID>POST ID</ID>
+          <Name>POST ID</Name>
+          <Source dwd:design-time-name="d31ec9c4-a80d-4a86-968e-6a2bc134aa55">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="4d85ce30-432b-456f-ab1b-78e71e181905">
+              <TableID>dbo_FACT_SOCIAL_ACTIVITY</TableID>
+              <ColumnID>POST_ID</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="235f804f-7bcd-4d70-ba90-040baa330321">
+          <ID>Recuento FACT SOCIAL ACTIVITY</ID>
+          <Name>Recuento FACT SOCIAL ACTIVITY</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="dcf7c5e5-30da-4c7c-b932-26ffbc50dae4">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="6d464127-91ab-452a-b16c-5dde810c1464">
+              <TableID>dbo_FACT_SOCIAL_ACTIVITY</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="43f11dbb-ed11-44d8-b063-8e440659538d">
+          <CubeDimensionID>DIM COMMENTS</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="597898c9-4cb3-4403-8280-b54bc8eb74b6">
+              <AttributeID>COMMENT ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="88301a97-cf51-4a4c-8146-2966e2066908">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="fc1f6afc-da2c-4ecf-8bf7-c45985035a70">
+                    <TableID>dbo_FACT_SOCIAL_ACTIVITY</TableID>
+                    <ColumnID>COMMENT_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2ad8e2a0-0e93-42a7-befe-796cb492749b">
+          <CubeDimensionID>DIM REACTIONS</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e4a48459-282b-4490-91e8-2330b2bad806">
+              <AttributeID>REACTION ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="16139784-2054-435e-ac40-cc9d67a72f1f">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e1532877-319d-483b-9681-9e2d11711bb3">
+                    <TableID>dbo_FACT_SOCIAL_ACTIVITY</TableID>
+                    <ColumnID>REACTION_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0d4d7f7c-312d-4302-a0a6-15efbe5a8238">
+          <CubeDimensionID>DIM LIKES</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4527fa64-7732-4f01-8b5c-febaecc4f73b">
+              <AttributeID>LIKE ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="bc456f2d-901b-459c-99f8-5a87dd1c52b7">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a53598ab-a469-4a97-97ff-f808c3799d93">
+                    <TableID>dbo_FACT_SOCIAL_ACTIVITY</TableID>
+                    <ColumnID>LIKE_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d70fe55d-2532-4320-a19f-d8c2b82949ed">
+          <CubeDimensionID>DIM SHARES</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="087b78fa-9e9d-40c4-872e-6b1aa59eb33b">
+              <AttributeID>SHARE ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7d32899d-a6a3-42de-be83-585cb534da44">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="cc29ce48-5abb-4946-9b80-866ed074750d">
+                    <TableID>dbo_FACT_SOCIAL_ACTIVITY</TableID>
+                    <ColumnID>SHARE_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="2cef7fe8-11e8-4db0-a08a-44cfdbaa36d3">
+    <DataSourceViewID>Linkedin DW</DataSourceViewID>
+  </Source>
+</Cube>
