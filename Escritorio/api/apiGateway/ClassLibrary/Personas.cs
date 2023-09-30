@@ -27,7 +27,7 @@ namespace ClassLibrary
         public string correo { get; set; }
         public string estado { get; set; }
 
-
+/*
         private static List<Personas> listaPersonas;
 
         public List<Personas> consultaVariasPersonas()
@@ -248,7 +248,7 @@ namespace ClassLibrary
                 }
             }
             return result;
-        }
+        }*/
     }
 }
 

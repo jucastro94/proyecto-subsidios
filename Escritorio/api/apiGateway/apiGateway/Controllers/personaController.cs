@@ -28,7 +28,7 @@ namespace apiGateway.Controllers
             {
                 if (!ModelState.IsValid) BadRequest();
 
-                personas.registrarPersona(person);
+                //personas.registrarPersona(person);
 
                 RabbitMqMessage<Personas> message = new RabbitMqMessage<Personas>();
                 message.ObjData = person;

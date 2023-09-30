@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DESKTOP-LJJE6HF.dbSubsidios"
+  DTS:DTSID="{340C8A7E-9DC6-4C9F-A690-9A2E2E1B9CAA}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=DESKTOP-LJJE6HF;Initial Catalog=dbSubsidios;Integrated Security=True;Application Name=SSIS-ETL-{340C8A7E-9DC6-4C9F-A690-9A2E2E1B9CAA}DESKTOP-LJJE6HF.dbSubsidios;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

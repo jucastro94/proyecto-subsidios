@@ -153,7 +153,7 @@ namespace front2.Controllers
                 {
                     Console.WriteLine("ha errado la peticion");
                 }
-                return RedirectToAction("Inicio", "Estudiantes");
+                return RedirectToAction("Inicio", "personas");
             }
 
         }
