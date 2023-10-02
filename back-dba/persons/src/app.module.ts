@@ -11,9 +11,9 @@ import { PersonsModule } from './persons/persons.module';
       type: 'mssql',
       host: 'localhost',
       port: 1433,
-      username: 'SA',
-      password: 'root@abc123',
-      database: 'DBA',
+      username: 'sa',
+      password: '123456',
+      database: 'dbSubsidios',
       autoLoadEntities: true,
       synchronize: true,
       options: {
