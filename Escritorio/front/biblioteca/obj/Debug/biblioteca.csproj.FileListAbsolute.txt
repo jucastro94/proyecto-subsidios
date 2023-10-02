@@ -1,6 +1,0 @@
-E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\front\biblioteca\bin\Debug\biblioteca.dll
-E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\front\biblioteca\bin\Debug\biblioteca.pdb
-E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\front\biblioteca\obj\Debug\biblioteca.csproj.AssemblyReference.cache
-E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\front\biblioteca\obj\Debug\biblioteca.csproj.CoreCompileInputs.cache
-E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\front\biblioteca\obj\Debug\biblioteca.dll
-E:\UE\6to semestre\todo\proyecto-subsidios\Escritorio\front\biblioteca\obj\Debug\biblioteca.pdb
