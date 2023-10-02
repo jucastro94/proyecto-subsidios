@@ -11,8 +11,8 @@
   DTS:LocaleID="9226"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{3204E095-3383-4FD9-BE12-4EC2AEA7BEA5}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{ED638901-A096-446F-834B-FB7A90E04B39}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -164,6 +164,234 @@
                       refId="Package\Data Flow Task\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Destino de ADO NET 1"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="Destino de ADO NET 1"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Dim_Requisitos"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Destino de ADO NET 1.Connections[IDbConnection]"
+                  connectionManagerID="{A827A4B1-72A2-460D-B43F-BC4AD5AFFE08}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-LJJE6HF.DBA_DW]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[sisben]"
+                      cachedDataType="i4"
+                      cachedName="sisben"
+                      externalMetadataColumnId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[Sisben]"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[sisben]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[propietario]"
+                      cachedDataType="i4"
+                      cachedName="propietario"
+                      externalMetadataColumnId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[Propietario]"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[propietario]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[ingresosfamiliares]"
+                      cachedDataType="r8"
+                      cachedName="ingresosfamiliares"
+                      externalMetadataColumnId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[IngresosFamiliares]"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[ingresosfamiliares]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[cierrefinanciero]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="cierrefinanciero"
+                      externalMetadataColumnId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[CierreFinanciero]"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[cierrefinanciero]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[cajacompensacion]"
+                      cachedDataType="i4"
+                      cachedName="cajacompensacion"
+                      externalMetadataColumnId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[CajaCompensacion]"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[cajacompensacion]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[cabezafamilia]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="cabezafamilia"
+                      externalMetadataColumnId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[CabezaFamilia]"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[cabezafamilia]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[otrossubsidios]"
+                      cachedDataType="i4"
+                      cachedName="otrossubsidios"
+                      externalMetadataColumnId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[OtrosSubsidios]"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[otrossubsidios]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[desempleo]"
+                      cachedDataType="i4"
+                      cachedName="desempleo"
+                      externalMetadataColumnId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[Desempleo]"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[desempleo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[inhabilidaddes]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="inhabilidaddes"
+                      externalMetadataColumnId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[InhabilidadDes]"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[inhabilidaddes]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[otros]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="otros"
+                      externalMetadataColumnId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[Otros]"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[otros]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[fecha]"
+                      cachedDataType="dbDate"
+                      cachedName="fecha"
+                      externalMetadataColumnId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[Fecha]"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[fecha]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[id_Aplicaciones]"
+                      cachedDataType="guid"
+                      cachedName="id_Aplicaciones"
+                      externalMetadataColumnId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[AplicacionID]"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[id_Aplicaciones]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[Expr1]"
+                      cachedDataType="guid"
+                      cachedName="Expr1"
+                      externalMetadataColumnId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[RequisitoID]"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[Expr1]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[id]"
+                      cachedDataType="guid"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[ProyectoID]"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[id]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[RequisitoID]"
+                      dataType="guid"
+                      name="RequisitoID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[AplicacionID]"
+                      dataType="guid"
+                      name="AplicacionID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[ProyectoID]"
+                      dataType="guid"
+                      name="ProyectoID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[Sisben]"
+                      dataType="i4"
+                      name="Sisben" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[Propietario]"
+                      dataType="i4"
+                      name="Propietario" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[IngresosFamiliares]"
+                      dataType="r8"
+                      name="IngresosFamiliares" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[CierreFinanciero]"
+                      dataType="wstr"
+                      length="50"
+                      name="CierreFinanciero" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[CajaCompensacion]"
+                      dataType="i4"
+                      name="CajaCompensacion" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[CabezaFamilia]"
+                      dataType="wstr"
+                      length="50"
+                      name="CabezaFamilia" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[OtrosSubsidios]"
+                      dataType="i4"
+                      name="OtrosSubsidios" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[Desempleo]"
+                      dataType="i4"
+                      name="Desempleo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[InhabilidadDes]"
+                      dataType="wstr"
+                      length="50"
+                      name="InhabilidadDes" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[Otros]"
+                      dataType="wstr"
+                      length="50"
+                      name="Otros" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[Fecha]"
+                      dataType="dbTimeStamp"
+                      name="Fecha" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Destino de ADO NET 1.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Destino de ADO NET 1.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Destino de ADO NET 1.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Destino de ADO NET 1.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -358,6 +586,352 @@ FROM     Aplicaciones</property>
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\Data Flow Task\Origen de ADO NET 1"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="Origen de ADO NET 1"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT Requisitos.id AS Expr1, Audit_Aplicaciones.id_Aplicaciones, Proyectos_1.id, Requisitos.sisben, Requisitos.propietario, Requisitos.ingresosfamiliares, Requisitos.cierrefinanciero, Requisitos.cajacompensacion, Requisitos.cabezafamilia, 
+                  Requisitos.otrossubsidios, Requisitos.desempleo, Requisitos.inhabilidaddes, Requisitos.otros, Requisitos.fecha
+FROM     Proyectos AS Proyectos_1 INNER JOIN
+                  Audit_Aplicaciones ON Proyectos_1.id = Audit_Aplicaciones.id INNER JOIN
+                  Requisitos ON Proyectos_1.id = Requisitos.id</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Origen de ADO NET 1.Connections[IDbConnection]"
+                  connectionManagerID="{740846EA-F0DF-48BF-803A-692D8F513C54}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-LJJE6HF.dbSubsidios]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[Expr1]"
+                      dataType="guid"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[Expr1]"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[Expr1]"
+                      name="Expr1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[id_Aplicaciones]"
+                      dataType="guid"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[id_Aplicaciones]"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[id_Aplicaciones]"
+                      name="id_Aplicaciones"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[id]"
+                      dataType="guid"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[id]"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[sisben]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[sisben]"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[sisben]"
+                      name="sisben"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[propietario]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[propietario]"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[propietario]"
+                      name="propietario"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[ingresosfamiliares]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[ingresosfamiliares]"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[ingresosfamiliares]"
+                      name="ingresosfamiliares"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[cierrefinanciero]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[cierrefinanciero]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[cierrefinanciero]"
+                      name="cierrefinanciero"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[cajacompensacion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[cajacompensacion]"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[cajacompensacion]"
+                      name="cajacompensacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[cabezafamilia]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[cabezafamilia]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[cabezafamilia]"
+                      name="cabezafamilia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[otrossubsidios]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[otrossubsidios]"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[otrossubsidios]"
+                      name="otrossubsidios"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[desempleo]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[desempleo]"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[desempleo]"
+                      name="desempleo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[inhabilidaddes]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[inhabilidaddes]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[inhabilidaddes]"
+                      name="inhabilidaddes"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[otros]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[otros]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[otros]"
+                      name="otros"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[fecha]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha]"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].Columns[fecha]"
+                      name="fecha"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[Expr1]"
+                      dataType="guid"
+                      name="Expr1" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[id_Aplicaciones]"
+                      dataType="guid"
+                      name="id_Aplicaciones" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[id]"
+                      dataType="guid"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[sisben]"
+                      dataType="i4"
+                      name="sisben" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[propietario]"
+                      dataType="i4"
+                      name="propietario" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[ingresosfamiliares]"
+                      dataType="r8"
+                      name="ingresosfamiliares" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[cierrefinanciero]"
+                      dataType="wstr"
+                      length="50"
+                      name="cierrefinanciero" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[cajacompensacion]"
+                      dataType="i4"
+                      name="cajacompensacion" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[cabezafamilia]"
+                      dataType="wstr"
+                      length="50"
+                      name="cabezafamilia" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[otrossubsidios]"
+                      dataType="i4"
+                      name="otrossubsidios" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[desempleo]"
+                      dataType="i4"
+                      name="desempleo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[inhabilidaddes]"
+                      dataType="wstr"
+                      length="50"
+                      name="inhabilidaddes" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[otros]"
+                      dataType="wstr"
+                      length="50"
+                      name="otros" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha]"
+                      dataType="dbDate"
+                      name="fecha" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[Expr1]"
+                      dataType="guid"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[Expr1]"
+                      name="Expr1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[id_Aplicaciones]"
+                      dataType="guid"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[id_Aplicaciones]"
+                      name="id_Aplicaciones" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[id]"
+                      dataType="guid"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[sisben]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[sisben]"
+                      name="sisben" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[propietario]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[propietario]"
+                      name="propietario" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[ingresosfamiliares]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[ingresosfamiliares]"
+                      name="ingresosfamiliares" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[cierrefinanciero]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[cierrefinanciero]"
+                      name="cierrefinanciero" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[cajacompensacion]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[cajacompensacion]"
+                      name="cajacompensacion" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[cabezafamilia]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[cabezafamilia]"
+                      name="cabezafamilia" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[otrossubsidios]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[otrossubsidios]"
+                      name="otrossubsidios" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[desempleo]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[desempleo]"
+                      name="desempleo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[inhabilidaddes]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[inhabilidaddes]"
+                      name="inhabilidaddes" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[otros]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[otros]"
+                      name="otros" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[fecha]"
+                      dataType="dbDate"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[fecha]"
+                      name="fecha" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
@@ -365,6 +939,11 @@ FROM     Aplicaciones</property>
               endId="Package\Data Flow Task\Destino de ADO NET.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
               startId="Package\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Salida de origen de ADO NET1]"
+              endId="Package\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de origen de ADO NET"
+              startId="Package\Data Flow Task\Origen de ADO NET 1.Outputs[Salida de origen de ADO NET]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -385,7 +964,7 @@ FROM     Aplicaciones</property>
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\Data Flow Task"
-          TopLeft="177.142857519948,58.8823528895638" />
+          TopLeft="158.571428908986,121.588235187541" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -393,41 +972,59 @@ FROM     Aplicaciones</property>
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="172,41.6"
           Id="Package\Data Flow Task\Origen de ADO NET"
-          TopLeft="275.000000585403,141.47058811129" />
+          TopLeft="100.71428592868,80.2941175766779" />
         <NodeLayout
           Size="176,41.6"
           Id="Package\Data Flow Task\Destino de ADO NET"
-          TopLeft="305.000000649265,285.99999974931" />
+          TopLeft="102.142857360292,256.941176245369" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Salida de origen de ADO NET]"
-          TopLeft="361.000000585403,183.07058811129">
+          TopLeft="188.428571644486,121.894117576678">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="32.0000000638622,102.92941163802"
+              EndConnector="0,135.047058668691"
               Start="0,0"
-              End="32.0000000638622,95.4294116380202">
+              End="0,127.547058668691">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,47.4647058190101" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,47.4647058190101"
-                    Point2="0,51.4647058190101"
-                    Point3="4,51.4647058190101" />
+                    End="0,127.547058668691" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="180.8,41.6"
+          Id="Package\Data Flow Task\Origen de ADO NET 1"
+          TopLeft="451.428572389544,92.5294116836003" />
+        <NodeLayout
+          Size="184.8,41.6"
+          Id="Package\Data Flow Task\Destino de ADO NET 1"
+          TopLeft="455.000000968576,269.176470352292" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Salida de origen de ADO NET1]"
+          TopLeft="544.61428667906,134.1294116836">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,135.047058668691"
+              Start="0,0"
+              End="0,127.547058668691">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="28.0000000638622,51.4647058190101" />
-                  <mssgle:CubicBezierSegment
-                    Point1="28.0000000638622,51.4647058190101"
-                    Point2="32.0000000638622,51.4647058190101"
-                    Point3="32.0000000638622,55.4647058190101" />
-                  <mssgle:LineSegment
-                    End="32.0000000638622,95.4294116380202" />
+                    End="0,127.547058668691" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -449,6 +1046,22 @@ FROM     Aplicaciones</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Destino de ADO NET">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Origen de ADO NET 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Destino de ADO NET 1">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
